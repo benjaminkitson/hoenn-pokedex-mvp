@@ -47,11 +47,12 @@ body {
 }
 
 .sub-content {
-  width: 100%;
+  width: calc(100vw - 200px);
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 100px;
 }
 
 .info {

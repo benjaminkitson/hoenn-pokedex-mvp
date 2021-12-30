@@ -1,4 +1,4 @@
-@import 'pokeball.css'
+@import 'pokeball.css';
 
 body {
   background: linear-gradient(rgb(166, 234, 248), rgb(68, 169, 241));
@@ -6,6 +6,7 @@ body {
   width: 100vw;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 
 h1 {
@@ -13,9 +14,20 @@ h1 {
   margin: 0;
 }
 
-.content {
+.info {
   width: 500px;
   height: 500px;
   background-color: white;
   border: 10px solid rgb(139, 0, 0);
+  position: relative;
+  z-index: 1;
+}
+
+.pokeball {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: 0;
+  left: 10vw;
+  top: calc(50vh - 250px);
 }

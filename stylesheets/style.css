@@ -52,11 +52,11 @@ body {
 
 .sub-content {
   width: calc(100vw - 200px);
-  height: 70vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 100px;
+  padding: 10px 10px 10px;
 }
 
 .info-wrapper{

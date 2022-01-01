@@ -46,12 +46,20 @@
   const footerTab = document.querySelector('.footer-tab')
   const footer = document.querySelector('.popup-footer')
   const chevron = document.querySelector('.chevron')
-  let rotation = 0
+  const pokeball = document.querySelector('.pokeball')
+  let chevronRotation = 0
+  let pokeballRotation = 0
+
+
+  setInterval(() => {
+    pokeballRotation += 0.2
+    pokeball.style.transform = `rotate(${pokeballRotation}deg)`
+  }, 5);
 
   function unfold() {
     footer.classList.toggle('unfolded')
-    rotation += 180
-    chevron.style.transform = `rotate(${rotation}deg)`
+    chevronRotation += 180
+    chevron.style.transform = `rotate(${chevronRotation}deg)`
   }
 
   footerTab.addEventListener('click', unfold)

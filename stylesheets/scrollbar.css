@@ -1,0 +1,29 @@
+/* width */
+.pokemon-list::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+.pokemon-list::-webkit-scrollbar-track {
+  background-color: rgbA(68, 169, 241, 0.6);
+  opacity: 0;
+  border-radius: 50px;
+}
+
+.pokemon-list::-webkit-scrollbar-track:hover {
+  background-color: rgbA(68, 169, 241, 0.6);
+  opacity: 1;
+}
+
+
+/* Handle */
+.pokemon-list::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 50px;
+  height: 50px;
+}
+
+/* Handle on hover */
+.pokemon-list::-webkit-scrollbar-thumb:active {
+  background: rgb(166, 234, 248);
+}

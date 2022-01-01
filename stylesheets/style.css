@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "footer.css";
 @import "pokemon_display.css";
+@import "scrollbar.css";
 
 * {
   color: black;
@@ -78,12 +79,12 @@ body {
 }
 
 .pokeball {
-  width: 600px;
-  height: 600px;
+  width: 650px;
+  height: 650px;
   position: absolute;
   z-index: 0;
   left: -10vw;
-  top: calc(50vh - 250px);
+  top: calc(50vh - 275px);
 }
 
 .top-section {

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="stylesheets/style.css">
-  <!-- <script src="https://kit.fontawesome.com/999a85aa00.js" crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/999a85aa00.js" crossorigin="anonymous"></script>
   <title>Pokédex</title>
 </head>
 <body>
@@ -75,24 +75,6 @@
 
   footerTab.addEventListener('click', unfold)
 
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
-    .then(response => response.json())
-    .then(data => data.results.forEach((pokemon) => {
-      let letters = pokemon.name.split('')
-      letters[0] = letters[0].toUpperCase()
-      console.log(letters)
-      let pokemonC = letters.join('')
-      pokemonList.insertAdjacentHTML('beforeend', `
-        <li>
-          <div class="pokemon ${pokemonCounter === 386 ? "last" : ""}">
-            <div class="thumb"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonCounter}.png"></div>
-            <div class="id">#${pokemonCounter}</div>
-            <div class="name">${pokemonC}</div>
-          </div>
-        </li>
-      `)
-      pokemonCounter++
-    }))
-
 </script>
+<script src="fetch_pokemon.js"></script>
 </html>

@@ -95,3 +95,7 @@ body {
   left: 0;
   top: 0;
 }
+
+.nostalgia:hover {
+  cursor: pointer;
+}

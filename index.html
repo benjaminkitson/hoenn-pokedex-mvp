@@ -19,6 +19,9 @@
       <div class="title">
         <h1>Pokédex</h1>
       </div>
+      <div class="nostalgia">
+        <strong>Click here for nostalgia</strong>
+      </div>
     </div>
 
     <div class="sub-content">
@@ -57,6 +60,8 @@
   const pokeball = document.querySelector('.pokeball');
   const pokemonList = document.querySelector('.pokemon-list');
   const infoTab = document.querySelector('.info-wrapper.one');
+  const pokemonCenter = new Audio('pokémon_center.mp3')
+  const nostalgia = document.querySelector('.nostalgia')
   console.log(infoTab)
   let pokemons
   let pokemonCounter = 1;
@@ -76,16 +81,25 @@
   }
 
   footerTab.addEventListener('click', unfold);
-</script>
-<script src="fetch_pokemon.js"></script>
-<script>
 
+  nostalgia.addEventListener('click', function() {
+    pokemonCenter.play()
+  })
+
+</script>
+
+
+
+<script src="fetch_pokemon.js"></script>
+
+
+
+<script>
   function showData() {
     const id = this.getAttribute("data-id")
     infoTab.innerHTML = ""
     infoTab.insertAdjacentHTML("beforeend", `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png">`)
   }
-
 
   setTimeout(() => {
     pokemons = document.querySelectorAll('.pokemon');

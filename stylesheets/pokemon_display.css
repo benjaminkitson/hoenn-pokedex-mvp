@@ -1,6 +1,7 @@
 .pokemon-list {
   width: 430px;
   height: 560px;
+  overflow-y: scroll;
 }
 
 .pokemon-list > li {

@@ -27,21 +27,7 @@
       <div class="info-wrapper two">
         <div class="pokemon-container">
           <ul class="pokemon-list">
-            <li>
-              <div class="pokemon">
-                Hello
-              </div>
-            </li>
-            <li>
-              <div class="pokemon">
-                Hello
-              </div>
-            </li>
-            <li>
-              <div class="pokemon">
-                Hello
-              </div>
-            </li>
+            <!-- here be pokemon -->
           </ul>
         </div>
       </div>
@@ -69,8 +55,11 @@
   const footer = document.querySelector('.popup-footer')
   const chevron = document.querySelector('.chevron')
   const pokeball = document.querySelector('.pokeball')
+  const pokemonList = document.querySelector('.pokemon-list')
+  console.log(pokemonList)
   let chevronRotation = 0
   let pokeballRotation = 0
+  let pokemon
 
   setInterval(() => {
     pokeballRotation += 0.2
@@ -85,9 +74,11 @@
 
   footerTab.addEventListener('click', unfold)
 
-  fetch("https://pokeapi.co/api/v2")
-    .then(response => response.JSON())
-    .then(data => console.log(data))
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
+    .then(response => response.json())
+    .then(data => data.results.forEach((pokemon) => {
+      pokemonList.insertAdjacentHTML('beforeend', `<li><div class="pokemon">${pokemon.name}<div></li>`)
+    }))
 
 </script>
 </html>

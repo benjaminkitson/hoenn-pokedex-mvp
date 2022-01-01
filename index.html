@@ -51,30 +51,47 @@
 
 </body>
 <script>
-  const footerTab = document.querySelector('.footer-tab')
-  const footer = document.querySelector('.popup-footer')
-  const chevron = document.querySelector('.chevron')
-  const pokeball = document.querySelector('.pokeball')
-  const pokemonList = document.querySelector('.pokemon-list')
-  let pokemonCounter = 1
-
-  let chevronRotation = 0
-  let pokeballRotation = 0
-  let pokemon
+  const footerTab = document.querySelector('.footer-tab');
+  const footer = document.querySelector('.popup-footer');
+  const chevron = document.querySelector('.chevron');
+  const pokeball = document.querySelector('.pokeball');
+  const pokemonList = document.querySelector('.pokemon-list');
+  const infoTab = document.querySelector('.info-wrapper.one');
+  console.log(infoTab)
+  let pokemons
+  let pokemonCounter = 1;
+  let chevronRotation = 0;
+  let pokeballRotation = 0;
+  let pokemon;
 
   setInterval(() => {
-    pokeballRotation += 0.2
-    pokeball.style.transform = `rotate(${pokeballRotation}deg)`
+    pokeballRotation += 0.2;
+    pokeball.style.transform = `rotate(${pokeballRotation}deg)`;
   }, 1);
 
   function unfold() {
-    footer.classList.toggle('unfolded')
-    chevronRotation += 180
-    chevron.style.transform = `rotate(${chevronRotation}deg)`
+    footer.classList.toggle('unfolded');
+    chevronRotation += 180;
+    chevron.style.transform = `rotate(${chevronRotation}deg)`;
   }
 
-  footerTab.addEventListener('click', unfold)
-
+  footerTab.addEventListener('click', unfold);
 </script>
 <script src="fetch_pokemon.js"></script>
+<script>
+
+  function showData() {
+    const id = this.getAttribute("data-id")
+    infoTab.innerHTML = ""
+    infoTab.insertAdjacentHTML("beforeend", `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png">`)
+  }
+
+
+  setTimeout(() => {
+    pokemons = document.querySelectorAll('.pokemon');
+    pokemons.forEach((pokemon) => {
+      pokemon.addEventListener('click', showData)
+    })
+  }, 100);
+</script>
 </html>

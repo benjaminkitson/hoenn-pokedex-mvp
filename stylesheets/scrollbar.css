@@ -5,13 +5,13 @@
 
 /* Track */
 .pokemon-list::-webkit-scrollbar-track {
-  background-color: rgbA(68, 169, 241, 0.6);
+  background: linear-gradient(rgb(161, 216, 255), rgb(68, 169, 241));
   opacity: 0;
   border-radius: 50px;
 }
 
 .pokemon-list::-webkit-scrollbar-track:hover {
-  background-color: rgbA(68, 169, 241, 0.6);
+  background: linear-gradient(rgb(161, 216, 255), rgb(68, 169, 241));
   opacity: 1;
 }
 

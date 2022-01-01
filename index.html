@@ -29,7 +29,7 @@
 
 
   <div class="popup-footer">
-    <div class="footer-tab"><i class="fas fa-chevron-up"></i></div>
+    <div class="footer-tab"><i class="fas fa-chevron-up chevron"></i></div>
     <ul class="footer-items">
       <div class="list-items">
         <li class="footer-item">hello</li>
@@ -45,9 +45,13 @@
 <script>
   const footerTab = document.querySelector('.footer-tab')
   const footer = document.querySelector('.popup-footer')
+  const chevron = document.querySelector('.chevron')
+  let rotation = 0
 
   function unfold() {
     footer.classList.toggle('unfolded')
+    rotation += 180
+    chevron.style.transform = `rotate(${rotation}deg)`
   }
 
   footerTab.addEventListener('click', unfold)

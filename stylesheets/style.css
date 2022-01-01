@@ -52,7 +52,7 @@ body {
 }
 
 .sub-content {
-  width: calc(100vw - 200px);
+  width: calc(100vw - 100px);
   height: 85vh;
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ body {
 }
 
 .info-wrapper.one {
-  width: 650px;
+  width: 750px;
 }
 
 .info-wrapper.two {

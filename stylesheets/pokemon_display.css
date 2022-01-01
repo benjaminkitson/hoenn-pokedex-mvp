@@ -1,0 +1,17 @@
+.pokemon-list {
+  width: 430px;
+  height: 560px;
+}
+
+.pokemon-list > li {
+  list-style-type: none;
+  width: 100%
+}
+
+.pokemon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%
+}

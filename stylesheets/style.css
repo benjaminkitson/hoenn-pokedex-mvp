@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "footer.css";
+@import "pokemon_display.css";
 
 * {
   color: black;
@@ -60,6 +61,8 @@ body {
 
 .info-wrapper{
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 596px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 30px;

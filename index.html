@@ -10,9 +10,6 @@
 </head>
 <body>
 
-
-  <!-- test commit! -->
-
   <img src="images/top section.svg" class="top-section" />
   <img src="images/pokeball.svg" class="pokeball" />
 
@@ -59,7 +56,8 @@
   const chevron = document.querySelector('.chevron')
   const pokeball = document.querySelector('.pokeball')
   const pokemonList = document.querySelector('.pokemon-list')
-  console.log(pokemonList)
+  let pokemonCounter = 1
+
   let chevronRotation = 0
   let pokeballRotation = 0
   let pokemon
@@ -80,7 +78,20 @@
   fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
     .then(response => response.json())
     .then(data => data.results.forEach((pokemon) => {
-      pokemonList.insertAdjacentHTML('beforeend', `<li><div class="pokemon">${pokemon.name}<div></li>`)
+      let letters = pokemon.name.split('')
+      letters[0] = letters[0].toUpperCase()
+      console.log(letters)
+      let pokemonC = letters.join('')
+      pokemonList.insertAdjacentHTML('beforeend', `
+        <li>
+          <div class="pokemon ${pokemonCounter === 386 ? "last" : ""}">
+            <div class="thumb"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonCounter}.png"></div>
+            <div class="id">#${pokemonCounter}</div>
+            <div class="name">${pokemonC}</div>
+          </div>
+        </li>
+      `)
+      pokemonCounter++
     }))
 
 </script>

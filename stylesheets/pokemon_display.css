@@ -1,5 +1,5 @@
 .pokemon-list {
-  width: 430px;
+  width: 380px;
   height: 560px;
   overflow-y: scroll;
 }
@@ -12,7 +12,33 @@
 .pokemon {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 100%
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid rgba(68, 169, 241, 0.6);
+}
+
+.pokemon.last {
+  border-bottom: none
+}
+
+.pokemon > div {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.id {
+  width: 50px;
+  font-size: 20px;
+}
+
+.thumb {
+  width: 170px;
+}
+
+.name {
+  width: 150px;
+  font-size: 20px;
 }

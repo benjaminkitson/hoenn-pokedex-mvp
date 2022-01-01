@@ -58,12 +58,20 @@ body {
   padding: 100px;
 }
 
-.info {
+.info-wrapper{
   display: flex;
-  width: 500px;
-  height: 500px;
+  height: 596px;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 30px;
+  border: 2px solid rgba(68, 169, 241, 0.6);
+}
+
+.info-wrapper.one {
+  width: 650px;
+}
+
+.info-wrapper.two {
+  width: 450px;
 }
 
 .pokeball {

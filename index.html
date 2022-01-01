@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="sub-content">
-      <div class="info">
+      <div class="info-wrapper one">
       </div>
-      <div class="info">
+      <div class="info-wrapper two">
       </div>
     </div>
   </div>
@@ -50,11 +50,10 @@
   let chevronRotation = 0
   let pokeballRotation = 0
 
-
   setInterval(() => {
     pokeballRotation += 0.2
     pokeball.style.transform = `rotate(${pokeballRotation}deg)`
-  }, 5);
+  }, 1);
 
   function unfold() {
     footer.classList.toggle('unfolded')

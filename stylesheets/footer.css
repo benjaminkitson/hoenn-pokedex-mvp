@@ -1,0 +1,16 @@
+.popup-footer {
+  position: absolute;
+  top: 100vh;
+  left: calc(50vw - 50px);
+  display: flex;
+  width: 500px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 30px 30px 0 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-items {
+  list-style-type: none;
+}

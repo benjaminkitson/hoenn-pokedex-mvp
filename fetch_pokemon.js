@@ -38,7 +38,7 @@ function showData() {
 
   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
     .then(response => response.json())
-    .then((data) => description = data.flavor_text_entries[15].flavor_text)
+    .then((data) => description = data.flavor_text_entries[14].flavor_text)
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(response => response.json())

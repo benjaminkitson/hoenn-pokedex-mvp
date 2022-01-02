@@ -72,6 +72,8 @@ body {
 
 .info-wrapper.one {
   width: 750px;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .info-wrapper.two {

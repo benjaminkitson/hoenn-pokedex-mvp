@@ -62,7 +62,6 @@
   const infoTab = document.querySelector('.info-wrapper.one');
   const pokemonCenter = new Audio('pokémon_center.mp3')
   const nostalgia = document.querySelector('.nostalgia')
-  console.log(infoTab)
   let pokemons
   let pokemonCounter = 1;
   let chevronRotation = 0;
@@ -88,24 +87,6 @@
 
 </script>
 
-
-
 <script src="fetch_pokemon.js"></script>
 
-
-
-<script>
-  function showData() {
-    const id = this.getAttribute("data-id")
-    infoTab.innerHTML = ""
-    infoTab.insertAdjacentHTML("beforeend", `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png">`)
-  }
-
-  setTimeout(() => {
-    pokemons = document.querySelectorAll('.pokemon');
-    pokemons.forEach((pokemon) => {
-      pokemon.addEventListener('click', showData)
-    })
-  }, 100);
-</script>
 </html>

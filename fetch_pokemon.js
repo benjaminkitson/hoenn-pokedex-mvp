@@ -71,8 +71,8 @@ function showData() {
     pokemonName.innerHTML = displayPokemon.name
     pokemonAbility.innerHTML = displayPokemon.ability
     pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
-    pokemonWeight.innerHTML = displayPokemon.weight
-    pokemonDescription.innerHTML = displayPokemon.description
+    pokemonWeight.innerHTML = displayPokemon.weight + "kg"
+      pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
 
     })
 

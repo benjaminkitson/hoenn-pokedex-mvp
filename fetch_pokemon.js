@@ -1,5 +1,7 @@
 //Fetch pokemon script
 
+
+
 const pokemonList = document.querySelector('.pokemon-list');
 const pokemonPicture = document.querySelector('.pokemon-image')
 const infoTab = document.querySelector('.info-container');
@@ -34,25 +36,27 @@ function showData() {
   infoTab.innerHTML = ""
   pokemonPicture.innerHTML = ""
 
-  let description
+  const displayPokemon = {}
 
   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
     .then(response => response.json())
-    .then((data) => description = data.flavor_text_entries[14].flavor_text)
+    .then((data) => displayPokemon['description'] = data.flavor_text_entries[14].flavor_text)
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(response => response.json())
     .then((data) => {
 
-      console.log(data)
-      console.log(description)
+      displayPokemon["height"] = data.height
+      displayPokemon["weight"] = data.weight
+
+
       let letters = data.forms[0].name.split('')
       letters[0] = letters[0].toUpperCase()
-      let pokemonName = letters.join('')
+      displayPokemon['name']= letters.join('')
 
       let letters2 = data.abilities[0].ability.name.split('')
       letters2[0] = letters2[0].toUpperCase()
-      let pokemonAbility = letters2.join('')
+      displayPokemon['ability'] = letters2.join('')
 
     pokemonPicture.insertAdjacentHTML('beforeend',`
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" class="pokemon-main-picture">
@@ -62,15 +66,15 @@ function showData() {
       <div class="pokemon-info">
         <div class="sub-info">
           <div class="div-1">
-            <div>Name: ${pokemonName}</div>
-            <div>Ability: ${pokemonAbility}</div>
+            <div>Name: ${displayPokemon.name}</div>
+            <div>Ability: ${displayPokemon.ability}</div>
           </div>
           <div class="div-2">
-            <div>Height: ${data.height >= 10 ? `${(data.height / 10).toFixed(2)}m` : `${data.height * 10}cm`} </div>
-            <div>Weight: ${Math.ceil(data.weight / 10)}kg </div>
+            <div>Height: ${displayPokemon.height >= 10 ? `${(displayPokemon.height / 10).toFixed(2)}m` : `${displayPokemon.height * 10}cm`} </div>
+            <div>Weight: ${Math.ceil(displayPokemon.weight / 10)}kg </div>
           </div>
         </div>
-        <div class="description">${description}</div>
+        <div class="description">${displayPokemon.description}</div>
       </div>
     `)
     })

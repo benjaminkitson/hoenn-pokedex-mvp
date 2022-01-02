@@ -7,6 +7,13 @@ const pokemonPicture = document.querySelector('.pokemon-image')
 const infoTab = document.querySelector('.info-container');
 
 
+const pokemonName = document.querySelector('.pokemon-name');
+const pokemonAbility = document.querySelector('.pokemon-ability');
+const pokemonHeight = document.querySelector('.pokemon-height');
+const pokemonWeight = document.querySelector('.pokemon-weight');
+const pokemonDescription = document.querySelector('.pokemon-description');
+
+
 fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
   .then(response => response.json())
   .then(data => data.results.forEach((pokemon) => {
@@ -33,21 +40,19 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
 
 function showData() {
   const id = this.getAttribute("data-id")
-  infoTab.innerHTML = ""
-  pokemonPicture.innerHTML = ""
 
   const displayPokemon = {}
 
   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
     .then(response => response.json())
-    .then((data) => displayPokemon['description'] = data.flavor_text_entries[14].flavor_text)
+    .then((data) => displayPokemon['description'] = data.flavor_text_entries[1].flavor_text)
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(response => response.json())
     .then((data) => {
 
-      displayPokemon["height"] = data.height
-      displayPokemon["weight"] = data.weight
+      displayPokemon["height"] = data.height * 10
+      displayPokemon["weight"] = Math.ceil(data.weight / 10)
 
 
       let letters = data.forms[0].name.split('')
@@ -58,26 +63,20 @@ function showData() {
       letters2[0] = letters2[0].toUpperCase()
       displayPokemon['ability'] = letters2.join('')
 
-    pokemonPicture.insertAdjacentHTML('beforeend',`
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" class="pokemon-main-picture">
-    `)
+    pokemonPicture.innerHTML = `
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png"
+      class="pokemon-main-picture">
+      `
 
-    infoTab.insertAdjacentHTML("beforeend", `
-      <div class="pokemon-info">
-        <div class="sub-info">
-          <div class="div-1">
-            <div>Name: ${displayPokemon.name}</div>
-            <div>Ability: ${displayPokemon.ability}</div>
-          </div>
-          <div class="div-2">
-            <div>Height: ${displayPokemon.height >= 10 ? `${(displayPokemon.height / 10).toFixed(2)}m` : `${displayPokemon.height * 10}cm`} </div>
-            <div>Weight: ${Math.ceil(displayPokemon.weight / 10)}kg </div>
-          </div>
-        </div>
-        <div class="description">${displayPokemon.description}</div>
-      </div>
-    `)
+    pokemonName.innerHTML = displayPokemon.name
+    pokemonAbility.innerHTML = displayPokemon.ability
+    pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
+    pokemonWeight.innerHTML = displayPokemon.weight
+    pokemonDescription.innerHTML = displayPokemon.description
+
     })
+
+    console.log(displayPokemon)
 }
 
 setTimeout(() => {

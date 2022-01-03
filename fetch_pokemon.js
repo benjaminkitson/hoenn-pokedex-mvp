@@ -1,17 +1,14 @@
 //Fetch pokemon script
 
-
-
 const pokemonList = document.querySelector('.pokemon-list');
 const pokemonPicture = document.querySelector('.pokemon-image')
 const infoTab = document.querySelector('.info-container');
-
-
 const pokemonName = document.querySelector('.pokemon-name');
 const pokemonAbility = document.querySelector('.pokemon-ability');
 const pokemonHeight = document.querySelector('.pokemon-height');
 const pokemonWeight = document.querySelector('.pokemon-weight');
 const pokemonDescription = document.querySelector('.pokemon-description');
+const pokemonTypes = document.querySelector('.type-content')
 
 
 fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
@@ -83,7 +80,15 @@ function showData() {
         pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
         pokemonWeight.innerHTML = displayPokemon.weight + "kg"
         pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
-
+        pokemonTypes.innerHTML = ''
+        displayPokemon.types.forEach((type) => {
+          let letters = type.split('')
+          letters[0] = letters[0].toLowerCase()
+          let formattedType = letters.join('')
+          pokemonTypes.insertAdjacentHTML('beforeend', `
+            <div class="${formattedType} type">${type}</div>
+          `)
+        })
         }, 200);
       })
 

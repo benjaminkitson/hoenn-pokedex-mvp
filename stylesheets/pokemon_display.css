@@ -26,6 +26,12 @@
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
 
+.pokeball-placeholder {
+  opacity: 0.3;
+  height: 65%;
+  width: 65%;
+}
+
 .pokemon-main-picture {
   height: 90%;
   width: 90%;
@@ -92,14 +98,44 @@
   font-size: 15px;
 }
 
-.type {
-  padding: 0px 30px;
+/* //////////// */
+
+
+.type-div {
+  padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 200px;
+  height: 80px;
+  width: 250px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.type-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 100%;
+}
+
+.type-content{
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.type {
+  height: 50%;
+  width: 35%;
+  border-radius: 10px;
+  border: 2px solid rgba(150, 150, 150, 1);
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

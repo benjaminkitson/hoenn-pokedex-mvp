@@ -1,12 +1,8 @@
 //Fetch pokemon script
 
-
-
 const pokemonList = document.querySelector('.pokemon-list');
 const pokemonPicture = document.querySelector('.pokemon-image')
 const infoTab = document.querySelector('.info-container');
-
-
 const pokemonName = document.querySelector('.pokemon-name');
 const pokemonAbility = document.querySelector('.pokemon-ability');
 const pokemonHeight = document.querySelector('.pokemon-height');

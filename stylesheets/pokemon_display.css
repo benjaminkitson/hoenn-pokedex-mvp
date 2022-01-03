@@ -1,57 +1,20 @@
-.pokemon-list {
-  width: 415px;
-  height: 558px;
-  overflow-y: scroll;
-}
-
-.pokemon-list > li {
-  list-style-type: none;
-  width: 100%
-}
-
-.pokemon {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 110px;
+.top-info {
   width: 100%;
-  border-bottom: 2px solid rgba(68, 169, 241, 0.6);
-  background-color: rgba(68, 169, 241, 0);
-  transition: all 0.3s;
-}
-
-.pokemon:hover {
-  cursor: pointer;
-  background-color: rgba(68, 169, 241, 0.5);
-  transition: all 0.3s;
-}
-
-.pokemon.last {
-  border-bottom: none
-}
-
-.pokemon > div {
-  height: 100%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-around;
 }
 
-.id {
-  width: 50px;
-  font-size: 20px;
+.sub-info {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
 }
 
-.thumb {
-  width: 170px;
-}
+/* //////////// */
 
-.name {
-  width: 150px;
-  font-size: 20px;
-}
-
-/* Pokemon display div (consider adding to a new file) */
 
 .pokemon-info {
   display: flex;
@@ -71,6 +34,14 @@
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
 
+.pokemon-main-picture {
+  height: 90%;
+  width: 90%;
+}
+
+/* /////////// */
+
+
 .info-container {
   display: flex;
   align-items: space-around;
@@ -81,11 +52,18 @@
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
 
-.top-info {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+.info-item {
+  width: 150px;
+  padding-left: 20px;
+  height: 20px;
 }
+
+.category {
+  font-weight: 500;
+}
+
+/* /////////// */
+
 
 .description-container {
   display: flex;
@@ -98,42 +76,8 @@
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
 
-.pokemon-main-picture {
-  height: 90%;
-  width: 90%;
-}
-
-.div-1 {
-  display: flex;
-  align-items: space-between;
-}
-
-.div-2 {
-  display: flex;
-  align-items: space-between;
-}
-
-.sub-info {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: space-between;
-}
-
 .description {
   padding: 0px 30px;
   display: flex;
   text-align: justify;
-}
-
-.info-item {
-  width: 150px;
-  padding-left: 20px;
-  height: 20px;
-}
-
-.category {
-  font-weight: 500;
 }

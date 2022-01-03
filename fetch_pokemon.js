@@ -45,7 +45,7 @@ function showData() {
 
   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
     .then(response => response.json())
-    .then((data) => displayPokemon['description'] = data.flavor_text_entries[1].flavor_text)
+    .then((data) => displayPokemon['description'] = data.flavor_text_entries[9].flavor_text)
 
   fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then(response => response.json())
@@ -67,13 +67,15 @@ function showData() {
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png"
       class="pokemon-main-picture">
       `
+    setTimeout(function() {
 
     pokemonName.innerHTML = displayPokemon.name
     pokemonAbility.innerHTML = displayPokemon.ability
     pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
     pokemonWeight.innerHTML = displayPokemon.weight + "kg"
-      pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
+    pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
 
+    }, 100);
     })
 
     console.log(displayPokemon)

@@ -1,100 +1,28 @@
-.pokemon-list {
-  width: 415px;
-  height: 558px;
-  overflow-y: scroll;
-}
-
-.pokemon-list > li {
-  list-style-type: none;
-  width: 100%
-}
-
-.pokemon {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 110px;
+.top-info {
   width: 100%;
-  border-bottom: 2px solid rgba(68, 169, 241, 0.6);
-  background-color: rgba(68, 169, 241, 0);
-  transition: all 0.3s;
-}
-
-.pokemon:hover {
-  cursor: pointer;
-  background-color: rgba(68, 169, 241, 0.5);
-  transition: all 0.3s;
-}
-
-.pokemon.last {
-  border-bottom: none
-}
-
-.pokemon > div {
-  height: 100%;
+  height: 350px;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.id {
-  width: 50px;
-  font-size: 20px;
-}
-
-.thumb {
-  width: 170px;
-}
-
-.name {
-  width: 150px;
-  font-size: 20px;
-}
-
-/* Pokemon display div (consider adding to a new file) */
-
-.pokemon-info {
+.sub-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: space-between;
 }
+
+/* //////////// */
+
 
 .pokemon-image {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: calc(100% - 4px);
   width: 400px;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(68, 169, 241, 0.6);
-}
-
-.info-container {
-  display: flex;
-  align-items: space-around;
-  height: 350px;
-  width: 200px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(68, 169, 241, 0.6);
-}
-
-.top-info {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.description-container {
-  display: flex;
-  align-items: center;
-  height: 150px;
-  width: 400px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px 0;
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
 
@@ -103,37 +31,75 @@
   width: 90%;
 }
 
-.div-1 {
+/* /////////// */
+
+
+.info-container {
   display: flex;
-  align-items: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  height: calc(100% - 54px);
+  width: 200px;
+  border-radius: 20px;
+  background-color: rgba(68, 169, 241, 1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 25px;
 }
 
-.div-2 {
-  display: flex;
-  align-items: space-between;
+.info-item {
+  width: 150px;
+  height: 75px;
 }
 
-.sub-info {
-  height: 100%;
-  width: 100%;
+.category {
+  font-weight: 500;
+  height: 20px;
+  font-size: 18px;
+}
+
+.detail {
+  height: 45px;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* /////////// */
+
+
+.description-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: space-between;
+  align-items: center;
+  justify-content: space-between;
+  height: 110px;
+  width: 656px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(68, 169, 241, 0.6);
+  padding: 20px;
 }
 
 .description {
   padding: 0px 30px;
   display: flex;
-  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 15px;
 }
 
-.info-item {
-  width: 150px;
-  padding-left: 20px;
-  height: 20px;
-}
-
-.category {
-  font-weight: 500;
+.type {
+  padding: 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.1);
 }

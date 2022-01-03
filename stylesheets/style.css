@@ -54,7 +54,7 @@ body {
 
 .sub-content {
   width: calc(100vw - 100px);
-  height: 85vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: space-around;

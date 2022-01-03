@@ -45,38 +45,47 @@ function showData() {
 
   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
     .then(response => response.json())
-    .then((data) => displayPokemon['description'] = data.flavor_text_entries[9].flavor_text)
-
-  fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-    .then(response => response.json())
     .then((data) => {
+      displayPokemon['description'] = data.flavor_text_entries[9].flavor_text})
 
-      displayPokemon["height"] = data.height * 10
-      displayPokemon["weight"] = Math.ceil(data.weight / 10)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(response => response.json())
+      .then((data) => {
 
+        displayPokemon["height"] = data.height * 10
+        displayPokemon["weight"] = Math.ceil(data.weight / 10)
+        displayPokemon["id"] = data.id
+        unformattedTypes = data.types.map(object => object.type.name)
+        displayPokemon["types"] = unformattedTypes.map((type) => {
+          let letters = type.split('')
+          letters[0] = letters[0].toUpperCase()
+          return letters.join('')
+        })
 
-      let letters = data.forms[0].name.split('')
-      letters[0] = letters[0].toUpperCase()
-      displayPokemon['name']= letters.join('')
+        console.log(displayPokemon.types)
 
-      let letters2 = data.abilities[0].ability.name.split('')
-      letters2[0] = letters2[0].toUpperCase()
-      displayPokemon['ability'] = letters2.join('')
+        let letters = data.forms[0].name.split('')
+        letters[0] = letters[0].toUpperCase()
+        displayPokemon['name']= letters.join('')
 
-    pokemonPicture.innerHTML = `
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png"
-      class="pokemon-main-picture">
-      `
-    setTimeout(function() {
+        let letters2 = data.abilities[0].ability.name.split('')
+        letters2[0] = letters2[0].toUpperCase()
+        displayPokemon['ability'] = letters2.join('')
 
-    pokemonName.innerHTML = displayPokemon.name
-    pokemonAbility.innerHTML = displayPokemon.ability
-    pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
-    pokemonWeight.innerHTML = displayPokemon.weight + "kg"
-    pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
+        pokemonPicture.innerHTML = `
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${displayPokemon.id}.png"
+          class="pokemon-main-picture">
+          `
+        setTimeout(function() {
 
-    }, 100);
-    })
+        pokemonName.innerHTML = displayPokemon.name
+        pokemonAbility.innerHTML = displayPokemon.ability
+        pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
+        pokemonWeight.innerHTML = displayPokemon.weight + "kg"
+        pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
+
+        }, 200);
+      })
 
     console.log(displayPokemon)
 }

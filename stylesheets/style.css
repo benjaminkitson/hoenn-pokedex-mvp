@@ -3,6 +3,7 @@
 @import "pokemon_display.css";
 @import "pokemon_list.css";
 @import "scrollbar.css";
+@import "types.css";
 
 * {
   color: black;

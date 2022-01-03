@@ -35,12 +35,12 @@ body {
 }
 
 .header-div {
-  width: calc(100% - 100px);
+  width: calc(100% - 40px);
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 20px;
 }
 
 .title {
@@ -94,7 +94,7 @@ body {
 }
 
 .top-section {
-  width: 500px;
+  width: 450px;
   height: auto;
   position: absolute;
   z-index: 0;

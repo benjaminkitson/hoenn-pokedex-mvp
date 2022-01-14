@@ -30,10 +30,10 @@
   }
 
   .pokeball {
-    width: 310px;
-    height: 310px;
+    width: 220px;
+    height: 220px;
     position: absolute;
-    top: 200px;
+    top: 240px;
     z-index: 0;
   }
 

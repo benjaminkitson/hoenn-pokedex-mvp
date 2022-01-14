@@ -24,11 +24,11 @@
   transition: all 0.3s;
 }
 
-.pokemon:hover {
+/* .pokemon:hover {
   cursor: pointer;
   background-color: rgba(68, 169, 241, 0.5);
   transition: all 0.3s;
-}
+} */
 
 .pokemon.last {
   border-bottom: none

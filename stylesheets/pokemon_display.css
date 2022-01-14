@@ -21,7 +21,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(68, 169, 241, 0.6);
 }
@@ -41,33 +41,30 @@
 
 
 .info-container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-content: flex-start;
-  height: calc(100% - 54px);
-  width: 200px;
-  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
   background-color: rgba(68, 169, 241, 1);
   border: 2px solid rgba(255, 255, 255, 0.5);
-  padding: 25px;
+  padding: 5px;
 }
 
 .info-item {
-  width: 150px;
-  height: 75px;
+
 }
 
 .category {
   font-weight: 500;
-  height: 20px;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .detail {
-  height: 45px;
   color: white;
-  font-size: 20px;
-  padding-top: 10px;
+  font-size: 12px;
+
 }
 
 /* /////////// */

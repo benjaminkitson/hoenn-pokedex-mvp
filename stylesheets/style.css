@@ -5,107 +5,119 @@
 @import "scrollbar.css";
 @import "types.css";
 
-* {
-  color: black;
-  font-family: "Raleway";
-  padding: 0;
-  margin: 0;
-}
+@media screen and (orientation: portrait) {
 
-body {
-  background: linear-gradient(rgb(166, 234, 248), rgb(68, 169, 241));
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
-  overflow: hidden;
-}
+  * {
+    color: black;
+    font-family: "Raleway";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-.content {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1;
-}
+  body {
+    background: linear-gradient(rgb(166, 234, 248), rgb(68, 169, 241));
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+  }
 
-.header-div {
-  width: 96%;
-  height: 13vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 2% 2%;
-}
+  .pokeball {
+    width: 310px;
+    height: 310px;
+    position: absolute;
+    z-index: 0;
+    left: -20px;
+    top: 150px;
+  }
+
+  .top-section {
+    /* width: 450px;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0; */
+    display: none;
+  }
+
+  .nostalgia:hover {
+    cursor: pointer;
+  }
 
 
-/* 1440 x 820 */
+  .content {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
 
-.title {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 300px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .header-div {
+    width:100%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2% 2%;
+    background-color: #ff0000;
+    border-bottom: 5px solid #d40000;
+  }
 
-.sub-content {
-  width: 98vw;
-  height: 73vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
 
-.info-wrapper{
-  display: flex;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  border-radius: 30px;
-  border: 2px solid rgba(68, 169, 241, 0.6);
-  height: 85%;
-  padding: 30px;
-}
+  /* 1440 x 820 */
 
-.info-wrapper.one {
-  width: 700px;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-left: 2%;
-}
+  .title {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.info-wrapper.two {
-  width: 450px;
-  margin-right: 2%;
-}
+  .sub-content {
+    width: 94vw;
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
 
-.pokeball {
-  width: 650px;
-  height: 650px;
-  position: absolute;
-  z-index: 0;
-  left: -10vw;
-  top: calc(50vh - 275px);
-}
+  .info-wrapper{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    border: 2px solid rgba(68, 169, 241, 0.6);
+    height: 85%;
+    padding: 30px;
+  }
 
-.top-section {
-  width: 450px;
-  height: auto;
-  position: absolute;
-  z-index: 0;
-  left: 0;
-  top: 0;
-}
+  .info-wrapper.one {
+    width: 700px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 1%;
+  }
 
-.nostalgia:hover {
-  cursor: pointer;
+  .info-wrapper.two {
+    width: 450px;
+    margin: 0 1%;
+  }
+
+
+
 }

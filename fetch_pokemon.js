@@ -27,8 +27,8 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
       <li>
         <div data-id="${pokemonCounter}" class="pokemon ${pokemonCounter === 386 ? "last" : ""}">
           <div class="thumb"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonCounter}.png"></div>
-          <div class="id">#${pokemonCounter}</div>
           <div class="name">${pokemonC}</div>
+          <div class="id">#${pokemonCounter}</div>
         </div>
       </li>
     `)

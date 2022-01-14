@@ -94,14 +94,14 @@
   .info-wrapper.one {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 5fr 3fr;
     gap: 10px;
-    height: 58%;
+    height: 63%;
   }
 
   .info-wrapper.two {
     margin-top: 12px;
-    height: 40%;
+    height: 30%;
   }
 
   .top-section {

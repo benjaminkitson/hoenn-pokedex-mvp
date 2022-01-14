@@ -45,6 +45,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    overflow: hidden;
   }
 
   .header-div {
@@ -95,12 +96,12 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 2fr 1fr;
     gap: 10px;
-    height: 55%;
+    height: 58%;
   }
 
   .info-wrapper.two {
     margin-top: 12px;
-    height: 46%;
+    height: 40%;
   }
 
   .top-section {

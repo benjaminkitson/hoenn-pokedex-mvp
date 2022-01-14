@@ -99,5 +99,6 @@ setTimeout(() => {
   pokemons = document.querySelectorAll('.pokemon');
   pokemons.forEach((pokemon) => {
     pokemon.addEventListener('click', showData)
+    pokemon.addEventListener('touchend', showData)
   })
 }, 100);

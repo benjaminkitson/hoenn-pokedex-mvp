@@ -10,7 +10,7 @@
 .pokemon-list > li {
   list-style-type: none;
   width: 90%;
-  height: 31%;
+  height: 45px;
 }
 
 .pokemon {

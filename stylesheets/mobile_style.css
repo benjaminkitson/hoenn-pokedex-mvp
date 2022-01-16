@@ -99,6 +99,7 @@ body {
   padding: 10px;
 }
 
+
 @media screen and (orientation: landscape) {
 
   .sub-content {
@@ -107,6 +108,7 @@ body {
   }
 
 }
+
 
 .info-wrapper {
   width: 100%;
@@ -131,6 +133,7 @@ body {
   margin-top: 12px;
   height: 30%;
 }
+
 
 @media screen and (orientation: landscape) {
 
@@ -197,8 +200,8 @@ body {
 
 
 
-/*/// Pokemon stats ///*/
 
+/*/// Pokemon stats ///*/
 
 
 .info-container {
@@ -387,7 +390,6 @@ body {
   width: 150px;
   font-size: 14px;
 }
-
 
 .top-section {
   /* width: 450px;

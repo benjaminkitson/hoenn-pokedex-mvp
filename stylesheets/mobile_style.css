@@ -400,3 +400,7 @@ body {
   top: 0; */
   display: none;
 }
+
+.popup-footer {
+  display: none;
+}

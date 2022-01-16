@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "types.css";
+@import "components/footer.css";
+@import "components/scrollbar.css";
 
 
 
@@ -28,15 +30,16 @@ body {
 }
 
 .pokeball {
-  width: 220px;
-  height: 220px;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: 240px;
+  top:  200px;
+  left: 140px;
   z-index: 0;
 }
 
 .header-div {
-  width:100%;
+  width: 100%;
   height: 10vh;
   display: flex;
   align-items: center;
@@ -48,21 +51,6 @@ body {
 }
 
 
-@media screen and (orientation: landscape) {
-
-  .pokeball {
-    top:  80px;
-    right: 180px;
-    z-index: 0;
-  }
-
-  .header-div {
-    display: none;
-  }
-
-}
-
-
 
 
 /*/// Styling for actual page content ///*/
@@ -70,7 +58,7 @@ body {
 
 .content {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -92,26 +80,16 @@ body {
 
 .sub-content {
   width: 100vw;
-  height: 85vh;
+  height: 100%;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   padding: 10px;
 }
 
-
-@media screen and (orientation: landscape) {
-
-  .sub-content {
-    flex-direction: row;
-    height: 100vh;
-  }
-
-}
-
-
 .info-wrapper {
-  width: 100%;
+  width: 45%;
+  height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,6 +97,7 @@ body {
   border-radius: 20px;
   border: 2px solid rgba(68, 169, 241, 0.6);
   padding: 10px;
+  margin-top: 12px;
 }
 
 .info-wrapper.left {
@@ -126,33 +105,12 @@ body {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 5fr 3fr;
   gap: 10px;
-  height: 63%;
+  margin-right: 10px;
 }
 
 .info-wrapper.right {
-  margin-top: 12px;
-  height: 30%;
+  margin-left: 10px;
 }
-
-
-@media screen and (orientation: landscape) {
-
-  .info-wrapper {
-    width: 100%;
-  }
-
-  .info-wrapper.left {
-    height: 100%;
-    margin: 0 10px 0 0;
-  }
-
-  .info-wrapper.right {
-    height: 100%;
-    margin: 0 0 0 10px;
-  }
-
-}
-
 
 .top-info {
   width: 100%;
@@ -398,9 +356,5 @@ body {
   z-index: 0;
   left: 0;
   top: 0; */
-  display: none;
-}
-
-.popup-footer {
   display: none;
 }

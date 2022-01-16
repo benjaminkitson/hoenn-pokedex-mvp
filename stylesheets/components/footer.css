@@ -1,75 +1,67 @@
-@media screen and (min-width: 1320px) {
-
-  .popup-footer {
-    position: absolute;
-    top: 100vh;
-    left: calc(50vw - 350px);
-    display: flex;
-    width: 500px;
-    height: 150px;
-    padding: 0px 100px;
-    background-color: #c9e9fb;
-    border-radius: 30px 30px 0 0;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); */
-    transition: top 0.5s;
-    border: 2px solid rgb(68, 169, 241);
-  }
-
-  .footer-items {
-    list-style-type: none;
-    width: 100%;
-  }
-
-  .list-items {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .footer-item {
-    display: inline;
-  }
-
-  .footer-tab {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 30px;
-    top: -32px;
-    left: calc(50% - 79px);
-    background-color: #c9e9fb;
-    border-radius: 10px 10px 0 0;
-    z-index: 3;
-    border: 2px solid rgb(68, 169, 241);
-    border-bottom: none;
-  }
-
-  .footer-tab:hover {
-    cursor: pointer;
-  }
-
-  .chevron {
-    color: rgb(68, 169, 241);
-    transition: all 0.5s;
-  }
-
-  .down {
-    transform: rotate(180deg);
-  }
-
-  .unfolded {
-    top: calc(100vh - 150px);
-  }
-
+.popup-footer {
+  position: absolute;
+  top: 100vh;
+  left: calc(50vw - 350px);
+  display: flex;
+  width: 700px;
+  height: 150px;
+  padding: 0px 100px;
+  background-color: #c9e9fb;
+  border-radius: 30px 30px 0 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); */
+  transition: top 0.5s;
+  border: 2px solid rgb(68, 169, 241);
 }
 
-.popup-footer {
-  display: none;
+.footer-items {
+  list-style-type: none;
+  width: 100%;
+}
+
+.list-items {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer-item {
+  display: inline;
+}
+
+.footer-tab {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  top: -30px;
+  left: calc(50% - 75px);
+  background-color: #c9e9fb;
+  border-radius: 10px 10px 0 0;
+  z-index: 3;
+  border: 2px solid rgb(68, 169, 241);
+  border-bottom: none;
+}
+
+.footer-tab:hover {
+  cursor: pointer;
+}
+
+.chevron {
+  color: rgb(68, 169, 241);
+  transition: all 0.5s;
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+.unfolded {
+  top: calc(100vh - 150px);
 }

@@ -5,7 +5,7 @@
   display: flex;
   width: 700px;
   height: 150px;
-  padding: 0px 100px;
+  padding: 0px 50px;
   background-color: #c9e9fb;
   border-radius: 30px 30px 0 0;
   align-items: center;
@@ -30,7 +30,22 @@
 }
 
 .footer-item {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  width: 80px;
+}
+
+.footer-item > a > i {
+  color: rgb(68, 169, 241);
+  transition: color 0.5s;
+}
+
+.footer-item:hover > a > i {
+  color: rgb(36, 120, 180);
+  transition: color 0.5s;
+  cursor: pointer;
 }
 
 .footer-tab {
@@ -54,8 +69,14 @@
 }
 
 .chevron {
-  color: rgb(68, 169, 241);
   transition: all 0.5s;
+  color: rgb(68, 169, 241);
+  transition: color 0.5s;
+}
+
+.footer-tab:hover > .chevron  {
+  color: rgb(36, 120, 180);
+  cursor: pointer;
 }
 
 .down {

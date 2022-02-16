@@ -8,4 +8,6 @@ It's available at http://bk-pokedex.netflify.app.
 
 It hopefully goes without saying that all of the credit for the designs of the pokémon, the pokéball etc lie with their creators, presumably people at Nintendo - not me at any rate. 
 
-This previously only worked on desktop - the opposite is now true, it now only works on mobile, desktop functionality should be restored soon!
+This should be more or less responsive across most screen sizes! If you're into splitting your monitor horizontally with two super wide short windows you might have a bad time though 😂
+
+Hopefully I'll add some other fun stuff like a search bar soon - I'd also like to condense the stuff I use from the pokeapi down and maybe create my own much lighter api from that information, which will hopefully make the app work faster and more consistently

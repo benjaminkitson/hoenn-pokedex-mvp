@@ -48,7 +48,7 @@ body {
 }
 
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
 
   .pokeball {
     top:  80px;
@@ -60,7 +60,7 @@ body {
     display: none;
   }
 
-}
+} */
 
 
 
@@ -100,14 +100,14 @@ body {
 }
 
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
 
   .sub-content {
     flex-direction: row;
     height: 100vh;
   }
 
-}
+} */
 
 
 .info-wrapper {
@@ -135,7 +135,7 @@ body {
 }
 
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
 
   .info-wrapper {
     width: 100%;
@@ -151,7 +151,7 @@ body {
     margin: 0 0 0 10px;
   }
 
-}
+} */
 
 
 .top-info {

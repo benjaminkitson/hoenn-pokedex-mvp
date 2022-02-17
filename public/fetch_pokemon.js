@@ -93,17 +93,24 @@ function showData() {
   const id = parseInt(this.getAttribute("data-id"))
   const pokemon = pokedex.find(pokemon => pokemon.id === id)
   console.log(pokemon)
-  fetch(pokemon.mainImageUrl)
+  fetch(pokemon.mainImageSrc)
     .then(response => response.blob())
-    pokemonName.innerHTML = pokemon.name
-    pokemonAbility.innerHTML = pokemon.ability
-    pokemonHeight.innerHTML = pokemon.height >= 100 ? `${(pokemon.height / 100).toFixed(2)}m` : `${pokemon.height}cm`
-    pokemonWeight.innerHTML = pokemon.weight + "kg"
-    pokemonDescription.innerHTML = (pokemon.description === undefined) ? "Description failed to load" : pokemon.description
-    pokemonTypes.innerHTML = ''
-    pokemon.types.forEach((type) => {
-      pokemonTypes.insertAdjacentHTML('beforeend', `
-        <div class="${type.toLowerCase()} type">${type}</div>
-      `)
+    .then((blob) => {
+      const imageURL = URL.createObjectURL(blob)
+      pokemonPicture.innerHTML = `
+      <img src="${imageURL}"
+      class="pokemon-main-picture">
+      `
+      pokemonName.innerHTML = pokemon.name
+      pokemonAbility.innerHTML = pokemon.ability
+      pokemonHeight.innerHTML = pokemon.height >= 100 ? `${(pokemon.height / 100).toFixed(2)}m` : `${pokemon.height}cm`
+      pokemonWeight.innerHTML = pokemon.weight + "kg"
+      pokemonDescription.innerHTML = (pokemon.description === undefined) ? "Description failed to load" : pokemon.description
+      pokemonTypes.innerHTML = ''
+      pokemon.types.forEach((type) => {
+        pokemonTypes.insertAdjacentHTML('beforeend', `
+          <div class="${type.toLowerCase()} type">${type}</div>
+        `)
+      })
     })
 }

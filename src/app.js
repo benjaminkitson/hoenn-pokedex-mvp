@@ -12,7 +12,11 @@ hbs.registerPartials(path.join(__dirname, '../templates/partials'))
 
 app.use(express.static(path.join(__dirname, "../public")))
 
-app.get('', (req, res) => {
+const maintenance = async (req, res, next) => {
+  res.send("Coming soon! Check out the readme for the API on GitHub")
+}
+
+app.get('', maintenance, (req, res) => {
   res.render('index.hbs')
 })
 

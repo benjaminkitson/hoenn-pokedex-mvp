@@ -10,11 +10,12 @@ const pokemonWeight = document.querySelector('.pokemon-weight');
 const pokemonDescription = document.querySelector('.pokemon-description');
 const pokemonTypes = document.querySelector('.type-content')
 
+let pokedex
 
 fetch("/pokedexdata")
   .then(response => response.json())
   .then((data) => {
-    console.log(data[0])
+    pokedex = data
     data.forEach((pokemon) => {
     const pokemonC = pokemon.name
     const id = pokemon.id
@@ -30,7 +31,16 @@ fetch("/pokedexdata")
         </li>
       `)
     })
+    const pokemons = document.querySelectorAll('.pokemon');
+    pokemons.forEach((pokemon) => {
+      pokemon.addEventListener('mouseup', showData)
+      pokemon.addEventListener('touchend', (e) => {
+        console.log(e)
+      })
+    })
   })
+
+
 
 // function showData() {
 //   const id = this.getAttribute("data-id")
@@ -72,32 +82,28 @@ fetch("/pokedexdata")
 //           `
 //         setTimeout(function() {
 
-//         pokemonName.innerHTML = displayPokemon.name
-//         pokemonAbility.innerHTML = displayPokemon.ability
-//         pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
-//         pokemonWeight.innerHTML = displayPokemon.weight + "kg"
-//         pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
-//         pokemonTypes.innerHTML = ''
-//         displayPokemon.types.forEach((type) => {
-//           let letters = type.split('')
-//           letters[0] = letters[0].toLowerCase()
-//           let formattedType = letters.join('')
-//           pokemonTypes.insertAdjacentHTML('beforeend', `
-//             <div class="${formattedType} type">${type}</div>
-//           `)
-//         })
+//
 //         }, 200);
 //       })
 
 //     console.log(displayPokemon)
 // }
 
-setTimeout(() => {
-  pokemons = document.querySelectorAll('.pokemon');
-  pokemons.forEach((pokemon) => {
-    pokemon.addEventListener('mouseup', showData)
-    pokemon.addEventListener('touchend', (e) => {
-      console.log(e)
+function showData() {
+  const id = parseInt(this.getAttribute("data-id"))
+  const pokemon = pokedex.find(pokemon => pokemon.id === id)
+  console.log(pokemon)
+  fetch(pokemon.mainImageUrl)
+    .then(response => response.blob())
+    pokemonName.innerHTML = pokemon.name
+    pokemonAbility.innerHTML = pokemon.ability
+    pokemonHeight.innerHTML = pokemon.height >= 100 ? `${(pokemon.height / 100).toFixed(2)}m` : `${pokemon.height}cm`
+    pokemonWeight.innerHTML = pokemon.weight + "kg"
+    pokemonDescription.innerHTML = (pokemon.description === undefined) ? "Description failed to load" : pokemon.description
+    pokemonTypes.innerHTML = ''
+    pokemon.types.forEach((type) => {
+      pokemonTypes.insertAdjacentHTML('beforeend', `
+        <div class="${type.toLowerCase()} type">${type}</div>
+      `)
     })
-  })
-}, 100);
+}

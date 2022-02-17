@@ -1,13 +1,5 @@
-A pokédex web app!
+A Hoenn Pokédex web-app + API!
 
-This uses the pokéapi - cheers to everyone who's contributed to that, making this would be impossible without it!
+After my issues navigating the PokéApi - It's great, but hardly beginner-friendly, and I have to assume needlessly in-depth for a lot of users - I've decided to have a go at my own one. It's MUCH smaller in size, and only extends to the first 386 Pokémon. I've included the Node script I used to extract and assemble the data from the PokéApi, so anyone can pretty much replicate this. 
 
-It's basically a list of the 386 pokemon from Gen I to III, with some fun info displayed when you select one.
-
-It's available at http://bk-pokedex.netflify.app.
-
-It hopefully goes without saying that all of the credit for the designs of the pokémon, the pokéball etc lie with their creators, presumably people at Nintendo - not me at any rate. 
-
-This should be more or less responsive across most screen sizes! If you're into splitting your monitor horizontally with two super wide short windows you might have a bad time though 😂
-
-Hopefully I'll add some other fun stuff like a search bar soon - I'd also like to condense the stuff I use from the pokeapi down and maybe create my own much lighter api from that information, which will hopefully make the app work faster and more consistently
+The data is pretty much directly from the PokéApi, although I did a bunch of cleaning up and formatting, and removed certain later-Gen pokémon from evolution chains. 

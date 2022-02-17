@@ -11,89 +11,86 @@ const pokemonDescription = document.querySelector('.pokemon-description');
 const pokemonTypes = document.querySelector('.type-content')
 
 
-fetch("https://pokeapi.co/api/v2/pokemon?limit=386")
+fetch("/pokedexdata")
   .then(response => response.json())
-  .then(data => data.results.forEach((pokemon) => {
-  let letters = pokemon.name.split('')
-  letters[0] = letters[0].toUpperCase()
-  let pokemonC = letters.join('')
-  if (pokemonCounter === 386) {
-    pokemonC = pokemonC.split('-')
-    pokemonC = pokemonC[0]
-  }
+  .then((data) => {
+    console.log(data[0])
+    data.forEach((pokemon) => {
+    const pokemonC = pokemon.name
+    const id = pokemon.id
+    const thumb = pokemon.thumbImageSrc
 
+    pokemonList.insertAdjacentHTML('beforeend', `
+        <li>
+          <div data-id="${id}" class="pokemon ${pokemonCounter === 386 ? "last" : ""}">
+            <div class="thumb"><img src="${thumb}"></div>
+            <div class="name">${pokemonC}</div>
+            <div class="id">#${id}</div>
+          </div>
+        </li>
+      `)
+    })
+  })
 
-  pokemonList.insertAdjacentHTML('beforeend', `
-      <li>
-        <div data-id="${pokemonCounter}" class="pokemon ${pokemonCounter === 386 ? "last" : ""}">
-          <div class="thumb"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemonCounter}.png"></div>
-          <div class="name">${pokemonC}</div>
-          <div class="id">#${pokemonCounter}</div>
-        </div>
-      </li>
-    `)
-  pokemonCounter++
-  }))
+// function showData() {
+//   const id = this.getAttribute("data-id")
 
-function showData() {
-  const id = this.getAttribute("data-id")
+//   const displayPokemon = {}
 
-  const displayPokemon = {}
+//   fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
+//     .then(response => response.json())
+//     .then((data) => {
+//       displayPokemon['description'] = data.flavor_text_entries[9].flavor_text})
 
-  fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}/`)
-    .then(response => response.json())
-    .then((data) => {
-      displayPokemon['description'] = data.flavor_text_entries[9].flavor_text})
+//       fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+//       .then(response => response.json())
+//       .then((data) => {
 
-      fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(response => response.json())
-      .then((data) => {
+//         displayPokemon["height"] = data.height * 10
+//         displayPokemon["weight"] = Math.ceil(data.weight / 10)
+//         displayPokemon["id"] = data.id
+//         unformattedTypes = data.types.map(object => object.type.namgit adde)
+//         displayPokemon["types"] = unformattedTypes.map((type) => {
+//           let letters = type.split('')
+//           letters[0] = letters[0].toUpperCase()
+//           return letters.join('')
+//         })
 
-        displayPokemon["height"] = data.height * 10
-        displayPokemon["weight"] = Math.ceil(data.weight / 10)
-        displayPokemon["id"] = data.id
-        unformattedTypes = data.types.map(object => object.type.name)
-        displayPokemon["types"] = unformattedTypes.map((type) => {
-          let letters = type.split('')
-          letters[0] = letters[0].toUpperCase()
-          return letters.join('')
-        })
+//         console.log(displayPokemon.types)
 
-        console.log(displayPokemon.types)
+//         let letters = data.forms[0].name.split('')
+//         letters[0] = letters[0].toUpperCase()
+//         displayPokemon['name']= letters.join('')
 
-        let letters = data.forms[0].name.split('')
-        letters[0] = letters[0].toUpperCase()
-        displayPokemon['name']= letters.join('')
+//         let letters2 = data.abilities[0].ability.name.split('')
+//         letters2[0] = letters2[0].toUpperCase()
+//         displayPokemon['ability'] = letters2.join('')
 
-        let letters2 = data.abilities[0].ability.name.split('')
-        letters2[0] = letters2[0].toUpperCase()
-        displayPokemon['ability'] = letters2.join('')
+//         pokemonPicture.innerHTML = `
+//           <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${displayPokemon.id}.png"
+//           class="pokemon-main-picture">
+//           `
+//         setTimeout(function() {
 
-        pokemonPicture.innerHTML = `
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${displayPokemon.id}.png"
-          class="pokemon-main-picture">
-          `
-        setTimeout(function() {
+//         pokemonName.innerHTML = displayPokemon.name
+//         pokemonAbility.innerHTML = displayPokemon.ability
+//         pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
+//         pokemonWeight.innerHTML = displayPokemon.weight + "kg"
+//         pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
+//         pokemonTypes.innerHTML = ''
+//         displayPokemon.types.forEach((type) => {
+//           let letters = type.split('')
+//           letters[0] = letters[0].toLowerCase()
+//           let formattedType = letters.join('')
+//           pokemonTypes.insertAdjacentHTML('beforeend', `
+//             <div class="${formattedType} type">${type}</div>
+//           `)
+//         })
+//         }, 200);
+//       })
 
-        pokemonName.innerHTML = displayPokemon.name
-        pokemonAbility.innerHTML = displayPokemon.ability
-        pokemonHeight.innerHTML = displayPokemon.height >= 100 ? `${(displayPokemon.height / 100).toFixed(2)}m` : `${displayPokemon.height}cm`
-        pokemonWeight.innerHTML = displayPokemon.weight + "kg"
-        pokemonDescription.innerHTML = (displayPokemon.description === undefined) ? "Description failed to load" : displayPokemon.description
-        pokemonTypes.innerHTML = ''
-        displayPokemon.types.forEach((type) => {
-          let letters = type.split('')
-          letters[0] = letters[0].toLowerCase()
-          let formattedType = letters.join('')
-          pokemonTypes.insertAdjacentHTML('beforeend', `
-            <div class="${formattedType} type">${type}</div>
-          `)
-        })
-        }, 200);
-      })
-
-    console.log(displayPokemon)
-}
+//     console.log(displayPokemon)
+// }
 
 setTimeout(() => {
   pokemons = document.querySelectorAll('.pokemon');

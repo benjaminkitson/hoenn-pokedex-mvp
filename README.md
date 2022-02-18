@@ -1,4 +1,4 @@
-A Hoenn Pokédex web-app + API!
+A Hoenn Pokédex API + web-app!
 
 After my issues navigating the PokéApi - It's great, but hardly beginner-friendly, and I have to assume needlessly in-depth for a lot of users - I've decided to have a go at my own one. It's MUCH smaller in size, and only extends to the first 386 Pokémon. I've included the Node script I used to extract and assemble the data from the PokéApi, so anyone can pretty much replicate this. 
 
@@ -15,3 +15,12 @@ Searches can also effectively be carried out as follows:
   <strong>/pokedexdata/type/${type}</strong> - returns an array of pokemon of the supplied type
 
   <strong>/pokedexdata/ability/${ability}</strong> - returns an array of pokemon with the supplied ability
+
+
+I'd like to thank the PokéApi bunch for their hard work - I'm not sure this use case was necessarily what they had in mind, but without their API making mine wouldn't have been possible. The various images are also still from their Github hosting.
+
+Clearly I don't own any of the intellectual property in use here, so credit to Nintendo etc for that, and for them being chill about people making this kind of thing - more on that here:
+
+https://www.forbes.com/sites/matthickey/2014/11/17/nintendo-to-allow-its-characters-in-other-media-license-free/?sh=243269584180
+
+

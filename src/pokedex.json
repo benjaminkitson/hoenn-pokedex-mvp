@@ -2359,7 +2359,13 @@
     "description": "An extremely rare Pokémon that may evolve in a number of different ways depending on stimuli.",
     "evolutionChain": [
       "Eevee",
-      "Vaporeon"
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {
@@ -2376,7 +2382,13 @@
     "description": "Its body’s cellular structure is similar to the molecular composition of water. It can melt invisibly in water.",
     "evolutionChain": [
       "Eevee",
-      ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"]
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {
@@ -2393,7 +2405,13 @@
     "description": "Its cells generate weak power that is amplified by its fur’s static electricity to drop thunderbolts. The bristling fur is made of electrically charged needles.",
     "evolutionChain": [
       "Eevee",
-      ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"]
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {
@@ -2410,7 +2428,13 @@
     "description": "It has a flame bag inside its body. After inhaling deeply, it blows out flames of nearly 3,100 degrees Fahrenheit.",
     "evolutionChain": [
       "Eevee",
-      ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"]
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {
@@ -3476,7 +3500,13 @@
     "description": "Its fur has the look and feel of velvet. The orb on its forehead glows when it uses psycho-power.",
     "evolutionChain": [
       "Eevee",
-      ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"]
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {
@@ -3493,7 +3523,13 @@
     "description": "The light of the moon changed Eevee’s genetic structure. It lurks in darkness for prey.",
     "evolutionChain": [
       "Eevee",
-      ["Vaporeon", "Jolteon", "Flareon", "Espeon", "Umbreon"]
+      [
+        "Vaporeon",
+        "Jolteon",
+        "Flareon",
+        "Espeon",
+        "Umbreon"
+      ]
     ]
   },
   {

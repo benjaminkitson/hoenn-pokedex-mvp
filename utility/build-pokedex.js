@@ -71,8 +71,6 @@ for (let i = 1; i < 387; i++) {
                 pokemon.evolutionChain.push(capitalise(chain.evolves_to[0].evolves_to[0].species.name))
               }
 
-              console.log(pokemon)
-
               resolve(pokemon)
             })
           })
@@ -82,8 +80,6 @@ for (let i = 1; i < 387; i++) {
 
     promises.push(pokemonPromise)
 
-
-
 }
 
 Promise.all(promises)
@@ -92,6 +88,5 @@ Promise.all(promises)
     return a.id > b.id
   })
   const data = JSON.stringify(sorted)
-  // console.log(sorted)
   fs.writeFileSync('pokedex.json', data)
 })

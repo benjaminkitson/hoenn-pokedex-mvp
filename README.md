@@ -4,7 +4,7 @@ After my issues navigating the PokéApi - It's great, but hardly beginner-friend
 
 The data is pretty much directly from the PokéApi, although I did a bunch of cleaning up and formatting, and removed certain later-gen pokémon from evolution chains. 
 
-The API can be accessed at hoenn-pokedex.herokuapp.com/pokedexdata (currently hoenn-pokedex-staging.herokuapp.com/pokedexdata) - this URL returns a JSON of all 386 pokemon from gens I-III. 
+The API can be accessed at <strong>hoenn-pokedex.herokuapp.com/pokedexdata</strong> (currently <strong>hoenn-pokedex-staging.herokuapp.com/pokedexdata</strong> while I'm still developing bits of it) - this URL returns a JSON of all 386 pokemon from gens I-III, with some basic data like types, sizes, and abilities. 
 
 Searches can also effectively be carried out as follows:
 

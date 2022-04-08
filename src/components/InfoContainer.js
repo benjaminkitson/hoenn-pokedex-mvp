@@ -1,14 +1,14 @@
 import React from 'react';
+import PokemonImage from './PokemonImage';
 import PokedexContext from '../contexts/pokedex';
 
 function InfoContainer() {
   return (
-  <div className={"info-wrapper left"}>
-    <div className="pokemon-image">
-      <img src="images/pokeball.svg" className="pokeball-placeholder" />
-    </div>
+  <div className="info-container info-wrapper">
 
-    <div className="info-container">
+    <PokemonImage />
+
+    <div className="info-items">
       <div className="info-item">
         <div className="category">Name:</div>
         <div className="detail pokemon-name"></div>

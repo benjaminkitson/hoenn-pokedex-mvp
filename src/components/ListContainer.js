@@ -1,13 +1,13 @@
 import React from 'react';
 import PokedexContext from '../contexts/pokedex';
 
-function InfoContainer() {
+function ListContainer() {
   return (
-    <div className="info-wrapper right">
+    <div className="list-container info-wrapper">
       <ul class="pokemon-list">
       </ul>
     </div>
   );
 }
 
-export default InfoContainer;
+export default ListContainer;

@@ -5,7 +5,7 @@ function InfoItem(props) {
 return (
     <div className="info__item">
       <div className="info__category">{props.category}</div>
-      <div className="info__detail"></div>
+      <div className="info__detail">{props.detail}</div>
     </div>
   );
 }

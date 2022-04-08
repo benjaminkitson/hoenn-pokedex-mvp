@@ -1,5 +1,5 @@
 const express = require('express');
-const pokedex = require('./pokedex');
+const pokedex = require('./server/pokedex');
 const path = require('path');
 const hbs = require('hbs');
 

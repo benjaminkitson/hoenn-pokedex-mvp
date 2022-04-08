@@ -1,0 +1,80 @@
+.secondary-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(68, 169, 241, 0.6);
+  padding: 20px;
+  grid-column-start: 1;
+  grid-column-end: span 2;
+}
+
+.secondary-info__description {
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 65%;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.description__text {
+  text-align: center;
+}
+
+
+
+
+/*/// Pokemon type / types ///*/
+
+
+.secondary-info__type {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.type__heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.type__content{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+.type {
+  height: 40%;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid rgba(150, 150, 150, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 8px;
+}

@@ -6,7 +6,7 @@ import PokedexContext from '../contexts/pokedex';
 
 function InfoContainer() {
   return (
-  <div className="info-container info-wrapper">
+  <div className="info-container">
     <PokemonImage />
     <InfoItems />
     <SecondaryInfo />

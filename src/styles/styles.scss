@@ -1,5 +1,11 @@
 @import './base/settings';
-@import './base/_base';
+@import './base/base';
+@import './components/infoitem';
+@import './components/infocontainer';
+@import './components/infoitems';
+@import './components/listcontainer';
+@import './components/secondaryinfo';
+@import './components/pokemonimage';
 
 // Dummy class to hide the annoying webpack overlay
 

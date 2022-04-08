@@ -223,7 +223,6 @@ body {
 .info__detail {
   color: white;
   font-size: 18px;
-
 }
 
 
@@ -232,7 +231,7 @@ body {
 /*/// Pokemon description ///*/
 
 
-.description-container {
+.secondary-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -246,7 +245,7 @@ body {
   grid-column-end: span 2;
 }
 
-.description {
+.secondary-info__description {
   padding: 4px;
   display: flex;
   justify-content: center;
@@ -261,7 +260,7 @@ body {
   padding: 10px;
 }
 
-.pokemon-description {
+.description__text {
   text-align: center;
 }
 
@@ -271,7 +270,7 @@ body {
 /*/// Pokemon type / types ///*/
 
 
-.type-div {
+.secondary-info__type {
   width: 40%;
   height: 100%;
   display: flex;
@@ -284,14 +283,14 @@ body {
   padding: 10px;
 }
 
-.type-heading{
+.type__heading{
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 16px;
 }
 
-.type-content{
+.type__content{
   height: 80%;
   width: 100%;
   display: flex;

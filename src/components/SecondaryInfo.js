@@ -1,16 +1,16 @@
 import React from 'react';
 import PokedexContext from '../contexts/pokedex';
 
-function SecondayInfo() {
+function SecondaryInfo() {
   return (
-    <div className="description-container">
-      <div className="description"><p className="pokemon-description"></p></div>
-      <div className="type-div">
-        <div className="type-heading">Type(s)</div>
-        <div className="type-content"></div>
+    <div className="secondary-info">
+      <div className="secondary-info__description"><p className="description__text"></p></div>
+      <div className="secondary-info__type">
+        <div className="type__heading">Type(s)</div>
+        <div className="type__content"></div>
       </div>
     </div>
   );
 }
 
-export default SecondayInfo;
+export default SecondaryInfo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PokemonImage from './PokemonImage';
 import InfoItems from './InfoItems';
-import SecondayInfo from './SecondaryInfo';
+import SecondaryInfo from './SecondaryInfo';
 import PokedexContext from '../contexts/pokedex';
 
 function InfoContainer() {
@@ -9,7 +9,7 @@ function InfoContainer() {
   <div className="info-container info-wrapper">
     <PokemonImage />
     <InfoItems />
-    <SecondayInfo />
+    <SecondaryInfo />
   </div>
   );
 }

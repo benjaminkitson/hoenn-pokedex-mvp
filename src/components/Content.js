@@ -1,6 +1,7 @@
 import React from 'react';
 import PokedexContext from '../contexts/pokedex';
-import MainContainer from './MainContainer';
+import InfoContainer from './InfoContainer';
+import ListContainer from './ListContainer';
 
 function Content() {
 
@@ -10,8 +11,8 @@ function Content() {
   return (
     <PokedexContext.Provider value={utils}>
       <div className="content">
-        <MainContainer position="left"/>
-        <MainContainer position="right"/>
+        <InfoContainer/>
+        <ListContainer/>
       </div>
     </PokedexContext.Provider>
   );

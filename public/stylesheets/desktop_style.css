@@ -139,7 +139,7 @@ body {
   height: 60%;
 }
 
-.info-items {
+.info {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-content: flex-start;
@@ -214,13 +214,13 @@ body {
   padding: 5px;
 } */
 
-.category {
+.info__category {
   font-weight: 500;
   font-size: 18px;
   margin-bottom: 5px;
 }
 
-.detail {
+.info__detail {
   color: white;
   font-size: 18px;
 

@@ -1,0 +1,11 @@
+.info {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(68, 169, 241, 1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 5px;
+}

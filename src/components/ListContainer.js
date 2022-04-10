@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import PokedexContext from '../contexts/pokedex';
 import ListItem from './ListItem';
-import getPokemon from '../services/getpokemon';
-import devData from '../devData';
+import getPokemon from '../services/getPokemon';
 
 // Variable for switching between local and API data
 // Dev-server will not work with this set to true
@@ -11,20 +9,11 @@ const DEV = true
 
 function ListContainer() {
 
-  const [pokemons, setPokemons] = useState(DEV ? devData : []);
+  const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-      if (DEV) {
-        getPokemon()
-          .then((result) => {
-            setPokemons(result);
-          })
-          .catch((error) => {
-            console.log(error);
-          })
-      }
+    getPokemon(DEV, setPokemons)
   }, [])
-
 
   return (
     <div className="list-container">

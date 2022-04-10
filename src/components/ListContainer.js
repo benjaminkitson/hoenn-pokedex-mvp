@@ -3,9 +3,9 @@ import ListItem from './ListItem';
 import getPokemon from '../services/getPokemon';
 
 // Variable for switching between local and API data
-// Dev-server will not work with this set to true
+// Dev-server will not work properly with this set to false
 
-const DEV = true
+const DEV = true;
 
 function ListContainer() {
 
@@ -13,7 +13,7 @@ function ListContainer() {
 
   useEffect(() => {
     getPokemon(DEV, setPokemons)
-  }, [])
+  }, []);
 
   return (
     <div className="list-container">

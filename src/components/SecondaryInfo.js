@@ -1,5 +1,4 @@
 import React from 'react';
-import PokedexContext from '../contexts/pokedex';
 
 function SecondaryInfo() {
   return (

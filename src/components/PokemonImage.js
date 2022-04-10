@@ -6,6 +6,8 @@ function PokemonImage() {
 
   const { activePokemon } = useContext(PokedexContext);
 
+  // isPlaceholder doesnt seem to fix the issue
+
   const [imageUrl, setImageUrl] = useState("images/pokeball.svg")
   const [isPlaceholder, setIsPlaceholder] = useState(true)
 

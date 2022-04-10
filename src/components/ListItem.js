@@ -7,10 +7,10 @@ function ListItem(props) {
 
   return (
     <li>
-      <div className="pokemon" onClick={() => {setActivePokemon(props.pokemon)}}>
-        <div className="thumb"><img src={props.pokemon.thumbImageSrc} /></div>
-        <div className="name">{props.pokemon.name}</div>
-        <div className="id">{props.pokemon.id}</div>
+      <div className="list__pokemon" onClick={() => {setActivePokemon(props.pokemon)}}>
+        <div className="pokemon__thumb"><img src={props.pokemon.thumbImageSrc} /></div>
+        <div className="pokemon__name">{props.pokemon.name}</div>
+        <div className="pokemon__id">{props.pokemon.id}</div>
       </div>
     </li>
   );

@@ -17,7 +17,7 @@ function ListContainer() {
 
   return (
     <div className="list-container">
-      <ul className="pokemon-list">
+      <ul className="list">
         {pokemons.map(pokemon => <ListItem pokemon={pokemon} key={pokemon.id}/>)}
       </ul>
     </div>

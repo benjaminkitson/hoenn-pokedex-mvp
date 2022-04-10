@@ -1,0 +1,28 @@
+/* width */
+.list::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+.list::-webkit-scrollbar-track {
+  background: linear-gradient(rgb(161, 216, 255), rgb(68, 169, 241));
+  opacity: 0;
+  border-radius: 50px;
+}
+
+.list::-webkit-scrollbar-track:hover {
+  background: linear-gradient(rgb(161, 216, 255), rgb(68, 169, 241));
+  opacity: 1;
+}
+
+/* Handle */
+.list::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 50px;
+  height: 50px;
+}
+
+/* Handle on hover */
+.list::-webkit-scrollbar-thumb:active {
+  background: rgb(166, 234, 248);
+}

@@ -9,7 +9,9 @@
   padding: 10px;
   margin: 20px 20px;
   height: 30%;
+  position: relative;
 }
+
 
 @media screen and (orientation: landscape) {
   .list-container {
@@ -26,7 +28,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.3s;
 }
+
+.list--loading {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
 
 .list > li {
   list-style-type: none;
@@ -49,6 +60,10 @@
   cursor: pointer;
   background-color: rgba(68, 169, 241, 0.5);
   transition: all 0.3s;
+}
+
+.list__pokemon--loading:hover {
+  cursor: default;
 }
 
 .list__pokemon.last {

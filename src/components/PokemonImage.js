@@ -5,8 +5,6 @@ function PokemonImage() {
 
   const { mainImage } = useContext(PokedexContext);
 
-  // isPlaceholder doesnt seem to fix the issue
-
   return (
     <div className="pokemon-image">
       {mainImage ? <img src={mainImage} className="pokemon-main-picture"/> : '' }

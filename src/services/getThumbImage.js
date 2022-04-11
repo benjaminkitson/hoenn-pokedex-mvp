@@ -1,13 +1,9 @@
 function getThumbImage(url) {
-    return new Promise((resolve, reject) => {
-      fetch(url)
-        .then(response => response.blob())
-        .then((imageBlob) => {
-          resolve(URL.createObjectURL(imageBlob));
-        })
-        .catch((error) => {
-          reject(error);
-        });
+  return fetch(url)
+    .then(response => response.blob())
+    .then((imageBlob) => (URL.createObjectURL(imageBlob)))
+    .catch((error) => {
+      console.log(error);
     });
 };
 

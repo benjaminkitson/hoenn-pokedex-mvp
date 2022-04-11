@@ -1,20 +1,20 @@
 import devData from "../devData";
 
-function getPokemon(DEV, setPokemons) {
+function getPokemon(DEV) {
 
   if (!DEV) {
     return new Promise((resolve, reject) => {
       fetch('/pokedexdata', { mode: 'no-cors' })
         .then(response => response.json())
-        .then((data) => {
-          setPokemons(data);
+        .then((pokemons) => {
+          return(pokemons);
         })
         .catch((error) => {
           reject(error);
         });
     });
   } else {
-    setPokemons(devData);
+    return devData;
   }
 };
 

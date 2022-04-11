@@ -18,7 +18,7 @@ function PokemonImage() {
 
   return (
     <div className="pokemon-image">
-      {imageUrl ? <img src={imageUrl} /> : '' }
+      {imageUrl ? <img src={imageUrl} className="pokemon-main-picture"/> : '' }
       <img src="images/pokeball.svg" className="pokeball-placeholder" />
     </div>
   );

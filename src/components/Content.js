@@ -6,10 +6,13 @@ import ListContainer from './ListContainer';
 function Content() {
 
   const [activePokemon, setActivePokemon] = useState({});
+  const [mainImage, setMainImage] = useState('');
 
   const utils = {
     activePokemon,
-    setActivePokemon
+    setActivePokemon,
+    mainImage,
+    setMainImage
   };
 
   return (

@@ -4,21 +4,13 @@ import getMainImage from '../services/getMainImage';
 
 function PokemonImage() {
 
-  const { activePokemon } = useContext(PokedexContext);
+  const { mainImage } = useContext(PokedexContext);
 
   // isPlaceholder doesnt seem to fix the issue
 
-  const [imageUrl, setImageUrl] = useState('')
-
-  useEffect(() => {
-    if (Object.keys(activePokemon).length !== 0) {
-      getMainImage(setImageUrl, activePokemon.mainImageSrc);
-    }
-  }, [activePokemon])
-
   return (
     <div className="pokemon-image">
-      {imageUrl ? <img src={imageUrl} className="pokemon-main-picture"/> : '' }
+      {mainImage ? <img src={mainImage} className="pokemon-main-picture"/> : '' }
       <img src="images/pokeball.svg" className="pokeball-placeholder" />
     </div>
   );

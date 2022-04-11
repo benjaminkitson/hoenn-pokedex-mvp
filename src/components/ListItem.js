@@ -1,13 +1,22 @@
 import React, { useContext } from 'react';
 import PokedexContext from '../contexts/pokedex';
+import getMainImage from '../services/getMainImage';
 
 function ListItem(props) {
 
-  const { setActivePokemon } = useContext(PokedexContext);
+  const { setActivePokemon, setMainImage } = useContext(PokedexContext);
+
+  function renderPokemonData() {
+    getMainImage(props.pokemon.mainImageSrc)
+      .then((url) => {
+        setMainImage(url);
+        setActivePokemon(props.pokemon);
+      })
+  }
 
   return (
     <li>
-      <div className="list__pokemon" onClick={() => {setActivePokemon(props.pokemon)}}>
+      <div className="list__pokemon" onClick={() => {renderPokemonData(props.pokemon)}}>
         <div className="pokemon__thumb"><img src={props.pokemon.thumbImageSrc} /></div>
         <div className="pokemon__name">{props.pokemon.name}</div>
         <div className="pokemon__id">{props.pokemon.id}</div>

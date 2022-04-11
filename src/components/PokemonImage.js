@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import PokedexContext from '../contexts/pokedex';
-import getMainImage from '../services/getMainImage';
 
 function PokemonImage() {
 

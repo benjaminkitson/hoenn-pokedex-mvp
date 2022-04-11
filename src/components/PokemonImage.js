@@ -8,18 +8,18 @@ function PokemonImage() {
 
   // isPlaceholder doesnt seem to fix the issue
 
-  const [imageUrl, setImageUrl] = useState("images/pokeball.svg")
-  const [isPlaceholder, setIsPlaceholder] = useState(true)
+  const [imageUrl, setImageUrl] = useState('')
 
   useEffect(() => {
     if (Object.keys(activePokemon).length !== 0) {
-      getMainImage(setImageUrl, setIsPlaceholder, activePokemon.mainImageSrc);
+      getMainImage(setImageUrl, activePokemon.mainImageSrc);
     }
   }, [activePokemon])
 
   return (
     <div className="pokemon-image">
-      <img src={imageUrl} className={`${isPlaceholder ? "pokeball-placeholder" : ""}`} />
+      {imageUrl ? <img src={imageUrl} /> : '' }
+      <img src="images/pokeball.svg" className="pokeball-placeholder" />
     </div>
   );
 }

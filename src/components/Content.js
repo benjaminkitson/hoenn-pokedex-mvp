@@ -9,12 +9,15 @@ function Content() {
 
   const [activePokemon, setActivePokemon] = useState({});
   const [mainImage, setMainImage] = useState('');
+  const [search, setSearch] = useState('');
 
   const utils = {
     activePokemon,
     setActivePokemon,
     mainImage,
-    setMainImage
+    setMainImage,
+    search,
+    setSearch
   };
 
   return (

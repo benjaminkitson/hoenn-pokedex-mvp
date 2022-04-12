@@ -1,9 +1,10 @@
 import React from 'react';
+import Search from './Search';
 
 function Header() {
   return (
     <div className="header">
-      Hello
+      <Search />
     </div>
   );
 };

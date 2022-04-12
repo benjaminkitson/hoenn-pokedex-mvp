@@ -1,0 +1,8 @@
+.pokeball {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top:  calc(50% - 400px);
+  left: calc(50% - 700px);
+  z-index: -1;
+}

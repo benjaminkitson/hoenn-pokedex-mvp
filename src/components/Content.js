@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PokedexContext from '../contexts/pokedex';
 import InfoContainer from './InfoContainer';
 import ListContainer from './ListContainer';
+import Pokeball from './Pokeball';
 
 function Content() {
 
@@ -18,6 +19,7 @@ function Content() {
   return (
     <PokedexContext.Provider value={utils}>
       <div className="content">
+        <Pokeball />
         <InfoContainer/>
         <ListContainer/>
       </div>

@@ -14,6 +14,6 @@ function InfoItems() {
       <InfoItem category="Weight:" detail={activePokemon.weight || ''} />
     </div>
   );
-}
+};
 
 export default InfoItems;

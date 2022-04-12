@@ -12,9 +12,9 @@ function ListItem(props) {
         .then((url) => {
           setMainImage(url);
           setActivePokemon(props.pokemon);
-        })
+        });
     }
-  }
+  };
 
   return (
     <li>
@@ -25,6 +25,6 @@ function ListItem(props) {
       </div>
     </li>
   );
-}
+};
 
 export default ListItem;

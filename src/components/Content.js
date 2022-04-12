@@ -25,6 +25,6 @@ function Content() {
       </div>
     </PokedexContext.Provider>
   );
-}
+};
 
 export default Content;

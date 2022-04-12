@@ -11,10 +11,10 @@ const DEV = true;
 function ListContainer() {
 
   const [pokemons, setPokemons] = useState([]);
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const pokemonPromises = []
+    const pokemonPromises = [];
     getPokemon(DEV)
       .then((pokemons) => {
         pokemons.forEach((pokemon) => {
@@ -25,15 +25,15 @@ function ListContainer() {
               console.log(pokemon);
               })
           );
-        })
+        });
         Promise.all(pokemonPromises)
           .then(() => {
             setPokemons(pokemons);
             setTimeout(() => {
               setIsLoading(false);
-            }, 300)
-          })
-      })
+            }, 300);
+          });
+      });
   }, []);
 
   return (
@@ -43,6 +43,6 @@ function ListContainer() {
       </ul>
     </div>
   );
-}
+};
 
 export default ListContainer;

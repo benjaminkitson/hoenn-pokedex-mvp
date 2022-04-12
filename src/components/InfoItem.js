@@ -8,6 +8,6 @@ function InfoItem(props) {
         <div className="info__detail">{props.detail}</div>
       </div>
     );
-}
+};
 
 export default InfoItem;

@@ -36,15 +36,15 @@ function Pokeball() {
   useEffect(() => {
     const interval = setInterval(() => {
       setRotation(rotation + 0.05);
-    }, 1)
-    return () => clearInterval(interval)
-  }, )
+    }, 1);
+    return () => clearInterval(interval);
+  }, );
 
 
   return (
     <img src="images/pokeball.svg" class="pokeball" style={{transform: `rotate(${rotation}deg)`}} />
-  )
+  );
 
-}
+};
 
 export default Pokeball;

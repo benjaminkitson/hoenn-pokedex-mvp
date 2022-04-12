@@ -11,6 +11,6 @@ function PokemonImage() {
       <img src="images/pokeball.svg" className="pokeball-placeholder" />
     </div>
   );
-}
+};
 
 export default PokemonImage;

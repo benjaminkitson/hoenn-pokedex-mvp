@@ -6,11 +6,10 @@ function SecondaryInfo() {
   const { activePokemon } = useContext(PokedexContext);
 
   function renderTypes() {
-    console.log(activePokemon)
     if (activePokemon.types) {
       return activePokemon.types.map(type => <div className={`type ${type.toLowerCase()}`}>{type}</div>);
     } else {
-      return ''
+      return '';
     }
   }
 
@@ -25,6 +24,6 @@ function SecondaryInfo() {
       </div>
     </div>
   );
-}
+};
 
 export default SecondaryInfo;

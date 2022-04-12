@@ -12,6 +12,6 @@ function InfoContainer() {
     <SecondaryInfo />
   </div>
   );
-}
+};
 
 export default InfoContainer;

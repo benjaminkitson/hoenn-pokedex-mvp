@@ -1,6 +1,4 @@
-A Hoenn Pokédex API + web-app!
-
-The web app is currently offline - I'm currently rebuilding it in React.
+A Hoenn Pokédex API + web app!
 
 After my issues navigating the PokéApi - It's great, but hardly beginner-friendly, and I have to assume needlessly in-depth for a lot of users - I've decided to have a go at my own one. It's MUCH smaller in size, and only extends to the first 386 Pokémon. I've included the Node script I used to extract and assemble the data from the PokéApi, so anyone can pretty much replicate this if they really feel they need all 1000+ pokémon.
 
@@ -25,4 +23,4 @@ Clearly I don't own any of the intellectual property in use here, so credit to N
 
 https://www.forbes.com/sites/matthickey/2014/11/17/nintendo-to-allow-its-characters-in-other-media-license-free/?sh=243269584180
 
-
+The 'staging' build of the web app is available at https://hoenn-pokedex-staging.herokuapp.com/ - I have more work to do on it, but the fundamental functionality more or les works.

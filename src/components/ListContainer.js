@@ -6,7 +6,7 @@ import getThumbImage from '../services/getThumbImage';
 // Variable for switching between local and API data
 // Dev-server will not work properly with this set to false
 
-const DEV = true;
+const DEV = false;
 
 function ListContainer() {
 

@@ -3,6 +3,7 @@ import PokedexContext from '../contexts/pokedex';
 import InfoContainer from './InfoContainer';
 import ListContainer from './ListContainer';
 import Pokeball from './Pokeball';
+import Header from './Header';
 
 function Content() {
 
@@ -19,9 +20,12 @@ function Content() {
   return (
     <PokedexContext.Provider value={utils}>
       <div className="content">
-        <Pokeball />
-        <InfoContainer/>
-        <ListContainer/>
+        <Header />
+        <div className="content__inner">
+          <Pokeball />
+          <InfoContainer/>
+          <ListContainer/>
+        </div>
       </div>
     </PokedexContext.Provider>
   );

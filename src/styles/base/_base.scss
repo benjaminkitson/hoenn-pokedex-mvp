@@ -27,8 +27,15 @@ body {
   flex-direction: column;
 }
 
+.content__inner {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+}
+
 @media screen and (orientation: landscape) {
-  .content {
+  .content__inner {
     flex-direction: row
   }
 }

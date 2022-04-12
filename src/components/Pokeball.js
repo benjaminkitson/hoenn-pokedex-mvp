@@ -45,6 +45,6 @@ function Pokeball() {
     <img src="images/pokeball.svg" class="pokeball" style={{transform: `rotate(${rotation}deg)`}} />
   );
 
-};
+}
 
 export default Pokeball;

@@ -27,12 +27,22 @@
   //   pokemonCenter.play()
   // })
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Pokeball() {
 
+  let [rotation, setRotation] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation(rotation + 0.05);
+    }, 1)
+    return () => clearInterval(interval)
+  }, )
+
+
   return (
-    <img src="images/pokeball.svg" class="pokeball" />
+    <img src="images/pokeball.svg" class="pokeball" style={{transform: `rotate(${rotation}deg)`}} />
   )
 
 }

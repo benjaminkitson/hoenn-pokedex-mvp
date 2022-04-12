@@ -21,7 +21,7 @@ function ListItem(props) {
       <div className={`list__pokemon ${props.isLoading ? "list__pokemon--loading" : ""}`} onClick={() => {renderPokemonData(props.pokemon)}}>
         <div className="pokemon__thumb"><img src={props.pokemon.downloadedThumb} /></div>
         <div className="pokemon__name">{props.pokemon.name}</div>
-        <div className="pokemon__id">{props.pokemon.id}</div>
+        <div className="pokemon__id">#{props.pokemon.id}</div>
       </div>
     </li>
   );
